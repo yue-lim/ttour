@@ -208,4 +208,173 @@ body {
   margin: 0 auto;
 }
 
+#wrap {
+  position: relative;
+}
+
+#header {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  position: absolute;
+  height: 116px;
+  width: 100%;
+  top:0;
+  left: 0;
+  z-index: 9999;
+}
+
+#header h1 {
+  float: left;
+  padding:45px 0 0;
+}
+#header h1 a {
+  background: url(../img/logo.png) no-repeat;
+  display: block;
+  width: 270px;
+  height: 71px;
+  /* background-size: contain; w/h값 조정시에는 contain으로 비율유지 */
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+#header .header_cont {
+  float: right;
+  width: 780px;
+}
+
+.util {
+  text-align: right;
+}
+
+.util >li{
+  display: inline-block;
+  font-size: 14px;
+  color: #eee;
+  padding: 10px 0px 0px 20px
+}
+
+.util >li:after {
+  content: "|";
+  display: inline-block;
+  font-size: 10px;
+  color: #eee;
+  position: relative;
+  top: -2px; left:10px
+}
+
+.util >li:last-child::after {
+  display: none;
+}
+
+.depth1 {
+  text-align: right;
+  /*아래 left 정렬을 원하는 위치에 정렬*/
+}
+
+.depth1 >li {
+  display: inline-block;
+   /*inline-block사용하면 기본적으로 left정렬*/
+  font-size: 18px;
+  color:#fff;
+  padding: 26px 40px 43px;
+  /* border: 1px solid #f00; */
+}
+
+.depth1 >li:last-child {
+  padding-right: 0;
+}
+
+.dep2box {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: rgba(250,100,0,0.85);
+  z-index: 100;
+  top:116px;
+  text-align: left;
+}
+
+.depth1 >li:hover .dep2box {
+  display: block;
+}
+
+.depth2 >li {
+  display: inline-block;
+  padding: 20px;
+}
+
+.depth1 >li:nth-child(1) .depth2 {
+  padding-left: 440px;
+}
+.depth1 >li:nth-child(2) .depth2 {
+  padding-left: 565px;
+}
+.depth1 >li:nth-child(3) .depth2 {
+  padding-left: 700px;
+}
+.depth1 >li:nth-child(4) .depth2 {
+  padding-left: 930px;
+}
+
+.depth1 >li:last-child .depth2>li {
+  padding-right: 0;
+}
+
+/*CONTAINER 시작*/
+/*슬라이드 박스*/
+
+.slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  background-position: center;
+  position: relative;
+}
+
+.slide1 {
+  background-image: url(../img/mainslide01.jpg);
+}
+
+.slide2 {
+  background-image: url(../img/mainslide02.jpg);
+}
+
+.slide3 {
+  background-image: url(../img/mainslide03.jpg);
+}
+
+.slide .text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  text-align: center;
+}
+
+.slide .text p:nth-child(1) {
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 5px #555;
+  border-bottom: 1px solid #999;
+  padding-bottom: 10px;
+}
+
+.slide .text p:nth-child(2) {
+  font-size: 20px;
+  letter-spacing: 8.8px;
+  margin-top: 20px;
+}
+
+.slide .text p:nth-child(3) {
+  font-size: 20px;
+  letter-spacing: 3px;
+  position: relative;
+  top:150px;
+}
+
+.slide2, .slide3 {
+  display: none;
+}
+
 
