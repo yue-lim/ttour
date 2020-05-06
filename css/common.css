@@ -506,11 +506,104 @@ body {
 .notice_recent li a {
   display: block;
   padding-left: 14px;
+  /*bg 넣을 자리*/
   background: url(../img/ico_bullet.png) no-repeat 0 50%;
-    /* 따라서 bg로 따로 넣기 */
-  /* background-size: 5px auto; bg로 넣으면 사이즈 조절도 편함 */
+  /* disc 대신 bg로 따로 넣기 */
+  /* background-size: 5px auto; 
+  bg로 넣으면 사이즈 조절도 편함 */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+/*FOOTER 시작*/
+
+footer {
+  border-top: 1px solid #ddd;
+}
+
+.foot_list li {
+  display: inline-block;
+  margin-top: 25px;
+  font-weight: bold; 
+  font-size:15px
+}
+
+.foot_list li:first-child:after {
+  display: inline-block;
+  content: "|";
+  padding: 0 10px;
+  font-size: 10px;
+  color: #000;
+  position: relative;
+  top:-2px; left: 2px;
+} 
+
+.foot_area h2 {
+  font-size: 14px;
+  padding-top:25px;
+  color: #666
+}
+
+.foot_area .addr {
+  padding-top: 5px;
+  line-height: 1.4;
+  font-size: 13px;
+  color: #666;
+}
+
+.foot_area .copy {
+  padding-top: 3px;
+  font-size: 13px;
+  color: #666;
+  letter-spacing: 0;
+}
+
+.foot_area {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.foot_area .snslink {
+  position: absolute;
+  top:0; right:0;
+} 
+
+.snslink li {
+  display: inline-block;
+  margin: 40px 30px;
+}
+
+.snslink li a {
+  display: block;
+  width:50px; height: 73px;
+  /*w/h 값 그대로 사용*/
+  background: url(../img/sprite.png) no-repeat;
+  /* background-position: 0 0; 기본값*/
+  text-indent: -9999px; 
+  overflow: hidden;
+}
+
+.snslink li+li a {
+  background-position: -50px 0;
+  /* 위치 포토샵에서 X 값에 음수값(-)붙여서 사용 */
+}
+
+.snslink li+li+li a {
+  background-position: -100px 0;
+}
+
+
+
+
+
+
+
+
+
+
+/*퀵 마크 시작*/
+.quick_area {
+  position: fixed;
+  top:50%; right: 0;
+}
