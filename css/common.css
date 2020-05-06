@@ -388,6 +388,7 @@ body {
 
 .about_box {
   background: #f4f0e9;
+  margin-bottom: 60px;
 }
 
 .place_list li {
@@ -458,6 +459,7 @@ body {
 
 .appbbs_area {
   padding: 60px;
+  margin-bottom: 70px;
 }
 
 .app_line {
@@ -527,7 +529,6 @@ footer {
   margin-top: 25px;
   font-weight: bold; 
   font-size:15px;
-  margin-bottom: 50px;
 }
 
 .foot_list li:first-child:after {
@@ -593,13 +594,6 @@ footer {
 .snslink li+li+li a {
   background-position: -100px 0;
 }
-
-
-
-
-
-
-
 
 
 
