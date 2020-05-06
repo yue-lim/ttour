@@ -114,6 +114,7 @@ section {
 
 body {
   line-height: 1;
+  letter-spacing: -1px;
 }
 
 img {
@@ -377,4 +378,139 @@ body {
   display: none;
 }
 
+/*다시 찾는 인기여행지 top3 시작*/
+
+.about_area h2 {
+  font-size: 40px;
+  padding:55px 0 105px;
+  text-align: center;
+}
+
+.about_box {
+  background: #f4f0e9;
+}
+
+.place_list li {
+  float: left;
+  width: 32%;
+  margin-left: 2%;
+  position: relative;
+  top:-50px;
+  text-align: center;
+}
+
+.place_list >li:first-child {
+  margin: 0
+}
+/*:nth-child(), :last-child는 :first-child에 비해 호환성이 낮음*/
+
+.place_list li h3 {
+  font-size: 18px;
+  padding: 25px 0 0;
+  font-weight: bold;
+  color: #000;
+}
+
+.place_list li .txt {
+  padding: 10px 30px 0;
+  line-height: 1.8;
+  color: #666;
+}
+
+.place_list li .view {
+  padding-top: 5px;
+  border-top: 2px solid #333;
+  color: #666;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/*사회적 거리는 늘이고 마음의 거리는 좁히고 시작*/
+
+.bgbox {
+  background: url(../img/mainslide03.jpg) no-repeat;
+  height: 200px;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.bgbox .txt {
+  position: absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  color: #fff;
+  text-align: center;
+}
+
+.bgbox .txt p:first-child {
+  font-size: 20px;
+}
+
+.bgbox .txt p:last-child {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-top: 10px;
+}
+
+
+/*상담 BOX 와 NOTICE BOX 시작*/
+
+.appbbs_area {
+  padding: 60px;
+}
+
+.app_line {
+  float: left;
+  width: 66%;
+  padding: 45px 0;
+  text-align: center;
+  background: url(../img/bg_app.jpg) no-repeat;
+}
+
+.app_line a {
+  display: inline-block;
+  width: 42.4%;
+  text-align: left;
+  height: 100px;
+  line-height: 100px;
+  padding-left: 75px; /*bg들어갈 자리*/
+  background: rgba(0, 0, 0, 0.3) url(../img/ico_katalk.png) no-repeat 20px center;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 26px;
+  margin-right: 1%
+}
+
+.app_line a+a {
+  margin-right: 0%;
+  background-image: url(../img/ico_phone.png);
+  padding-left: 85px;
+}
+
+.bbs_line {
+  float: right;
+  width: 30%;
+}
+
+.bbs_line h3 {
+  font-size: 26px;
+  padding-bottom: 10px;
+}
+
+.notice_recent li {
+  padding: 8px 0;
+  /* list-style-type: disc; 기본값 but, content 바깥으로 생김 */
+}
+
+.notice_recent li a {
+  display: block;
+  padding-left: 14px;
+  background: url(../img/ico_bullet.png) no-repeat 0 50%;
+    /* 따라서 bg로 따로 넣기 */
+  /* background-size: 5px auto; bg로 넣으면 사이즈 조절도 편함 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
