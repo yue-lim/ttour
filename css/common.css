@@ -601,4 +601,76 @@ footer {
 .quick_area {
   position: fixed;
   top:50%; right: 0;
+  margin-top: -122.5px;
+  width: 94px;
+  z-index: 999999;
+}
+
+.quick_list li {
+  text-align: center;
+  background: #282828;
+  font-size: 15px;
+}
+
+.quick_list li a {
+  display: block;
+  padding: 15px 0;
+  border-top: 1px solid #4d4d4d;
+}
+
+.quick_list li a h3 {
+  color: #ddd;
+  font-size: inherit;
+  padding-bottom: 10px;
+  letter-spacing: -2px;
+}
+
+.quick_list li a p {
+  font-size:  13px;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.to_top {
+  text-align: center;
+  background: #fff;
+}
+
+.to_top a {
+  font-size: 14px;
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  padding-top: 8px;
+  color: #444;
+  border-left: 1px solid #a3a3a3;
+  border-bottom: 1px solid #a3a3a3;
+  position: relative;
+}
+
+/* .to_top a::before {
+  content: "▲"; 
+  display: block;
+  font-size: 10px;
+  color: #000;
+  position: absolute;
+  top:-10px; left: 50%;
+  margin-left: -5px;
+} */
+
+.to_top a:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: 8px solid #000;
+  /*▲(top) ▼(bottom) ◀(left) ▶(right)   */
+  border-top:none;
+  border-left-color: transparent ;
+  border-right-color: transparent ;
+  position: absolute; 
+  /* top:-5px; 높이조절가능 */
+  left: 50% ;
+  margin-left: -8px; 
+  /*크기만큼 margin값줌*/
 }
