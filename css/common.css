@@ -405,6 +405,33 @@ body {
 }
 /*:nth-child(), :last-child는 :first-child에 비해 호환성이 낮음*/
 
+.place_list li .imgbox {
+  height: 328px;
+  overflow: hidden;
+  position: relative;
+}
+
+.place_list li .imgbox img {
+  transition: all 0.4s;
+}
+
+.place_list li .imgbox:hover img {
+  transform: scale(1.1);
+}
+
+.place_list li .imgbox:after {
+  content: ""; 
+  position: absolute;
+  top:0%; left:0%; bottom:0%; right:0%;
+  background: rgba(0,0,0,0);
+  transition: all 0.4s;
+}
+
+.place_list li .imgbox:hover:after {
+  background: rgba(0,0,0,0.3);
+}
+
+
 .place_list li h3 {
   font-size: 18px;
   padding: 25px 0 0;
