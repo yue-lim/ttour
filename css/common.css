@@ -431,6 +431,23 @@ body {
   background: rgba(0,0,0,0.3);
 }
 
+.place_list li .imgbox:before {
+  content: "\f00e"; 
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900 !important;
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  top:50%; left:50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: all 0.4s 0.4s;
+  z-index: 9999;
+}
+
+.place_list li .imgbox:hover:before {
+  opacity: 1;
+}
 
 .place_list li h3 {
   font-size: 18px;
