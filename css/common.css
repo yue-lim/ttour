@@ -238,6 +238,10 @@ body {
   overflow: hidden;
 }
 
+.openMOgnb {
+  display: none;
+}
+
 #header .header_cont {
   float: right;
   width: 780px;

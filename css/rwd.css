@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 @media screen and (max-width:1049px) {
-
     
     #header h1 {
         float: left;
@@ -11,7 +10,8 @@
       #header .header_cont {
         float: right;
         width: 60%;
-        /*(1) W: 60%로 변경*/
+        padding-right: 20px;
+        /*(1) W: 60%로 변경, 우측 여백 +20px*/
       }
       
       .depth1 {
@@ -25,7 +25,7 @@
         font-size: 18px;
         color:#fff;
         padding: 26px 20px 43px;
-        /*(2) 좌우여백 40px->20px로 줄임*/
+        /*(2) nav li 좌우여백 40px->20px로 줄임*/
       }
       
       .depth1 >li:last-child {
@@ -67,7 +67,7 @@
 }
 
 @media screen and (max-width:799px) {
-
+    
     #header {
         background: rgba(0,0,0,0.5);
         color: #fff;
@@ -81,9 +81,10 @@
       
       #header h1 {
         float: none;
-        padding:35px 0 0 ;
+        padding:28px 0;
         text-align: center;
       }
+      /*(1) float:none 으로 풀고 패딩줄암*/
 
       #header h1 a {
         background: url(../img/logo.png) no-repeat;
@@ -91,12 +92,41 @@
         width: 180px;
         height: 23px;
         background-size: contain; 
-        /*(1) 로고이미지가 박스보다 클 경우, w/h값 조정시에는 contain으로 비율유지 */
+        /*(2) w/h값 줄인 후, 로고이미지가 박스보다 클 경우, w/h값 조정시에는 contain으로 비율유지 */
         text-indent: -9999px;
         overflow: hidden;
-        /*(2)  margin: 0 auto; */
+        /*(3) 줄어든 헤더박스에 logo 가운데 정렬하기
+        a { display: block; margin:0 auto }
+        a { display: inline-block} -> 상위태그 { text-align: center } */
       }
 
+      /*(4) 모바일gnb 햄버거 만들기 시작*/
+      .openMOgnb {
+        display: block;
+        position: absolute;
+        top:35px; left: 15px;
+        width: 25px;
+        height: 16px;
+      }
+
+      .openMOgnb span {
+          display: block;
+          width: 25px;
+          height: 3px;
+          background: #fff;
+          margin-bottom: 4px;
+          border-radius: 10px;
+      }
+
+      .openMOgnb span:nth-of-type(2) {
+          width: 17px;
+      }
+
+      .openMOgnb span:last-child {
+          margin-bottom: 0;
+      }
+
+      /*헤더 nav 수정 시작*/
       #header .header_cont {
         display: none;
       }
@@ -169,7 +199,6 @@
       .depth1 >li:nth-child(4) .depth2 {
           padding-left: 53%;
       }
-      /*(3) submenu는 모두 동일한 위치=> %값*/
       
       .depth1 >li:last-child .depth2>li {
         padding-right: 0;
