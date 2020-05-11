@@ -238,7 +238,7 @@ body {
   overflow: hidden;
 }
 
-.openMOgnb {
+.openMOgnb, closeMOgnb {
   display: none;
 }
 
@@ -325,6 +325,8 @@ body {
 .depth1 >li:last-child .depth2>li {
   padding-right: 0;
 }
+
+
 
 /*CONTAINER 시작*/
 /*슬라이드 박스*/

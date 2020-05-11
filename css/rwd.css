@@ -64,6 +64,62 @@
         padding-right: 0;
       }
       
+      /*(4) 퀵메뉴박스 스타일*/
+
+      /*(4)-1 margin 0*/
+      .quick_area {
+        position: fixed;
+        top:50%; right: 20px;
+        margin-top: 22.5px;
+        /*(4)- 4 w값 동일하게 45px로 변경, right위치 20px만큼 안으로, 중간에 오게 margin-top:22.5px*/
+        width: 45px;
+        z-index: 999999;
+      }
+
+      /*(4)-2 퀵리스트는 display :none하고 관련태그는 지우기*/
+      .quick_list {
+        display: none;
+      }
+      
+      /*(4)-3-1 w/h radius:50% border테두리주기 */
+      .to_top {
+        text-align: center;
+        background: rgba(0,0,0,0.3);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: 1px solid #a3a3a3;
+      }
+      
+      /*(4)-3-2 겹치는 요소 삭제 and 추가요소 변경*/
+      .to_top a {
+        font-size: 14px;
+        display: block;
+        line-height: 45px;
+        padding-top: 8px;
+        color: #fff;
+        border-left: 0px solid #a3a3a3;
+        border-bottom: 0px solid #a3a3a3;
+        position: relative;
+      }
+      
+      
+      .to_top a:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: 8px solid #fff;
+        /*▲(top) ▼(bottom) ◀(left) ▶(right)   */
+        border-top:none;
+        border-left-color: transparent ;
+        border-right-color: transparent ;
+        position: absolute; 
+        /* top:-5px; 높이조절가능 */
+        left: 50% ;
+        margin-left: -8px; 
+        /*크기만큼 margin값줌*/
+      }
 }
 
 @media screen and (max-width:799px) {
@@ -132,6 +188,38 @@
           margin-bottom: 0;
       }
 
+      /*(8)-1 헤더온일 때, X버튼 생김*/
+      #header.on .closeMOgnb {
+        display: block;
+        position: absolute;
+        top: 40px; right: 15px;
+        width: 25px;
+        height: 17px;
+      }
+
+      /*(8)-2 모든내용에 링크잡히게 */
+      .closeMOgnb a {
+        display: block;
+      }
+
+      /*(8)-3-1 span 값잡기*/
+      .closeMOgnb span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        border-radius: 10px;
+        transform: rotate(45deg);
+        /*(8)-3-2 2개를 같은 위치선상에 놓기위해서 absolute*/
+        position: absolute;
+        top:0; left: 0;
+      }
+
+      /*(8)-4 2번째 span은 rotate -45도 */
+      .closeMOgnb span:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+
       /*(5)-2-2 헤더콘트자체 none이지만 설정값정해줌*/
       #header .header_cont {
         display: none;
@@ -191,7 +279,7 @@
         border-bottom: 1px solid #83868b;
       }
 
-      /*(5)-6-2 padding-left:none*/
+      /*(5)-6-2 홀수만 padding-left:none*/
       .depth1 >li:nth-child(odd) {
         border-left: none;
       }
@@ -229,6 +317,65 @@
       /*(5)-5 호버 시, 서브메뉴 none으로 변경 하고 .depth2 관련은 다 지워도 상관X*/
       .depth1 >li:hover .dep2box {
         display: none;
+      }
+
+      /*(10) top박스 위치 top:80%로 아래로 */
+      .quick_area {
+        position: fixed;
+        top:80%; right: 20px;
+        margin-top: 0px;
+        width: 45px;
+        z-index: 999999;
+      }
+
+      /*(11) display:none 하고 scroll하면 나타내기>script에서... */
+      .to_top {
+        display: none;
+      }
+
+      /*(9) 퀵리스트 fixd 하고 위치, w:100% 잡아주기*/
+      .quick_list {
+        display: block;
+        position: fixed;
+        bottom: 0; left: 0;
+        width: 100%;
+      }
+
+      /*(9)-1 float w:33.33% 주고 html list에 cf주고오기*/
+      .quick_list li {
+        float: left;
+        width: 33.33%;
+        text-align: center;
+        background: #282828;
+        font-size: 15px;
+      }
+      
+      /*(9)-3-1 border 스타일 주기, 마지막 li a 만 none*/
+      .quick_list li a {
+        display: block;
+        padding: 15px 0;
+        border-top: 1px solid #4d4d4d;
+        border-right: 1px solid #4d4d4d;
+      }
+
+      .quick_list li:last-child a {
+        border-right: none
+      }
+      
+      /*(9)-3-2 padding-bottom: 0으로 위치선정*/
+      .quick_list li a h3 {
+        color: #ddd;
+        font-size: inherit;
+        padding-bottom: 0px;
+        letter-spacing: -2px;
+      }
+
+      /*(9)-2 p태그 display:none*/
+      .quick_list li a p {
+        display: none;
+        font-size:  13px;
+        line-height: 1.3;
+        color: #fff;
       }
       
       
