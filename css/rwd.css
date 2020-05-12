@@ -86,6 +86,47 @@
         position: relative;
         top:150px;
       }
+
+      /*(6) 상담 BOX 와 NOTICE BOX 시작*/
+
+.appbbs_area {
+  padding: 60px;
+  margin-bottom: 70px;
+}
+
+.app_line {
+  float: left;
+  width: 66%;
+  padding: 45px 0;
+  text-align: center;
+  background: url(../img/bg_app.jpg) no-repeat;
+}
+
+.app_line a {
+  display: inline-block;
+  width: 42.4%;
+  text-align: left;
+  height: 100px;
+  line-height: 100px;
+  padding-left: 75px; /*bg들어갈 자리*/
+  background: rgba(0, 0, 0, 0.3) url(../img/ico_katalk.png) no-repeat 20px center;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 15px;
+  margin-right: 1%
+}
+
+.app_line a+a {
+  margin-right: 0%;
+  background-image: url(../img/ico_phone.png);
+  padding-left: 85px;
+}
+
+.bbs_line {
+  float: right;
+  width: 30%;
+}
+
       
       /*(4) 퀵메뉴박스 스타일*/
 
@@ -404,6 +445,48 @@
   line-height: 1.2;
   margin-top: 10px;
 }
+
+/*(15) 상담 BOX 와 NOTICE BOX 시작*/
+
+.appbbs_area {
+  padding: 0px;
+  margin-bottom: 70px;
+}
+
+.app_line {
+  float: none;
+  width: 100%;
+  padding: 45px 0;
+  text-align: center;
+  background: url(../img/bg_app.jpg) no-repeat;
+  background-size: cover;
+}
+
+.app_line a {
+  display: inline-block;
+  width: 42.4%;
+  text-align: left;
+  height: 100px;
+  line-height: 100px;
+  padding-left: 75px; /*bg들어갈 자리*/
+  background: rgba(0, 0, 0, 0.3) url(../img/ico_katalk.png) no-repeat center center;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 0px;
+  margin-right: 1%
+}
+
+.app_line a+a {
+  margin-right: 0%;
+  background-image: url(../img/ico_phone.png);
+  padding-left: 85px;
+}
+
+.bbs_line {
+  float: none;
+  width: 100%;
+  margin: 20px
+}
     
       /*(10) top박스 위치 top:80%로 아래로 */
       .quick_area {
@@ -463,6 +546,90 @@
         line-height: 1.3;
         color: #fff;
       }
+
+      /*(16) FOOTER 수정*/
+
+      /*(16)-2 padding 좌우 20px 추가*/
+footer {
+  border-top: 1px solid #ddd;
+  padding-left: 20px; 
+  padding-right: 20px;
+}
+
+.foot_list li {
+  display: inline-block;
+  margin-top: 25px;
+  font-weight: bold; 
+  font-size:15px;
+}
+
+.foot_list li:first-child:after {
+  display: inline-block;
+  content: "|";
+  padding: 0 10px;
+  font-size: 10px;
+  color: #000;
+  position: relative;
+  top:-2px; left: 2px;
+} 
+
+.foot_area h2 {
+  font-size: 14px;
+  padding-top:25px;
+  color: #666
+}
+
+.foot_area .addr {
+  padding-top: 5px;
+  line-height: 1.4;
+  font-size: 13px;
+  color: #666;
+}
+
+.foot_area .copy {
+  padding-top: 3px;
+  font-size: 13px;
+  color: #666;
+  letter-spacing: 0;
+}
+
+.foot_area {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+/*(16)-1 position: absolute 해제 static 
+(16)-3 li 가운데 정렬 하려면 부모BOX에 text-align: center*/ 
+.foot_area .snslink {
+  position: static;
+  top:0; right:0;
+  text-align: center;
+} 
+
+.snslink li {
+  display: inline-block;
+  margin: 40px 30px;
+}
+
+.snslink li a {
+  display: block;
+  width:50px; height: 73px;
+  /*w/h 값 그대로 사용*/
+  background: url(../img/sprite.png) no-repeat;
+  /* background-position: 0 0; 기본값*/
+  text-indent: -9999px; 
+  overflow: hidden;
+}
+
+.snslink li+li a {
+  background-position: -50px 0;
+  /* 위치 포토샵에서 X 값에 음수값(-)붙여서 사용 */
+}
+
+.snslink li+li+li a {
+  background-position: -100px 0;
+}
+
       
       
 }
