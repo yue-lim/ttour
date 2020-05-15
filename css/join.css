@@ -30,7 +30,6 @@
 
 .join_form {
     padding: 55px 50px;
-    border: 1px solid #000
 }
 
 .info_pilsoo {
@@ -100,4 +99,27 @@
     color:#444;
     padding: 10px;
     line-height: 1.5;
+}
+
+.join_form .btn {
+    text-align: center;
+}
+
+.join_form .btn input {
+    width: 80px;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 20px 5px 20px;
+}
+
+.join_form .btn input[type=reset] {
+    background: #444;
+}
+
+.join_form .btn input:hover {
+    background: #f00;
 }
