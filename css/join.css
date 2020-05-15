@@ -74,11 +74,30 @@
 }
 
 .join_form input[type=text],
-.join_form input[type=password] {
+.join_form input[type=password],
+.join_form select,
+.join_form textarea {
     height: 45px;
     padding:0 10px;
     border: 1px solid #ccc;
     line-height: 45px;
     font-size: 15px;
     width: 100%;
+}
+
+.join_form #email_lbl,
+.join_form #edomain,
+.join_form #edomain_opt {
+    width: 160px;
+}
+
+.join_form #query {
+    height: 245px;
+    /*textarea는 글꼴 관련 스타일을 상위태그에서 상속받지 못함*/
+    font-size: 15px;
+    font-family: 'Malgun Gothic','맑은 고딕','sans-serif';
+    letter-spacing: -1px;
+    color:#444;
+    padding: 10px;
+    line-height: 1.5;
 }

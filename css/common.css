@@ -113,6 +113,17 @@ fieldset {
   border: none
 }
 
+/*높이가 약간 다르니까*/
+input,
+select {
+  vertical-align:middle;
+}
+
+/*추*/
+textarea {
+  resize: none;
+}
+
 /* 자식들이 float 속성을 가질때 부모의 높이가 무너지므로 .cf로 해결함 */
 .cf:after,
 .cf:before {

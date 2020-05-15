@@ -98,6 +98,20 @@
                             <legend>회원가입양식</legend>
                             <p class="info_pilsoo pilsoo_item">필수입력</p>
                             <ul class="app_list">
+								<li class="cf">
+                                    <label for="email_lbl" class="tit_lbl pilsoo_item">이메일</label>
+                                    <div class="app_content">
+										<input type="text" id="email_lbl" name="email_lbl">
+										<span class="ico_space"> @ </span>
+										<input type="text" id="edomain" name="edomain">
+										<select name="edomain_opt" id="edomain_opt">
+											<option>-이메일선택-</option>
+											<option value="naver.com">네이버</option>
+											<option value="daum.net">다음</option>
+											<option value="">직접입력</option>
+										</select>
+                                     </div>
+								 </li>
                                 <li class="cf">
                                     <label for="name_lbl" class="tit_lbl pilsoo_item">작성자명</label>
                                     <div class="app_content">
@@ -122,7 +136,34 @@
                                         <input type="text" id="hb_lbl" placeholder='휴대폰번호를 "-"없이 숫자만 입력해주세요'>
                                      </div>
                                  </li>
-                                    
+								 <li class="cf">
+                                    <label class="tit_lbl">성별</label>
+                                    <div class="app_content">
+										<input type="radio" id="male" name="gender">
+										<label for="male" class="gender">남</label>
+										<input type="radio" id="female" name="gender">
+										<label for="female" class="gender">여</label>
+                                     </div>
+								 </li>
+								 <li class="cf">
+									 <label class="tit_lbl">취미</label>
+									 <div class="app_content">
+										 <input type="checkbox" id="hobby1" name="hobby1">
+										 <label for="hobby1">등산</label>
+										 <input type="checkbox" id="hobby2" name="hobby2">
+										 <label for="hobby2">수영</label>
+										 <input type="checkbox" id="hobby3" name="hobby3">
+										 <label for="hobby3">영화감상</label>
+									 </div>
+								 </li>
+								 <li class="cf">
+									 <label for="" class="tit_lbl">문의내용</label>
+									<div class="app_content">
+										<textarea name="query" id="query" placeholder=
+"간단한 상담 요청사항을 남겨주시면 보다 상세한 상담이 가능합니다.
+전화 상담 희망시 기재 부탁드립니다."></textarea>
+									</div>
+								 </li>
                             </ul>
                         </fieldset>
                     </form>
