@@ -119,6 +119,20 @@ select {
   vertical-align:middle;
 }
 
+/*클릭이전과 이후 img로 변경하기*/
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background: url(../img/ico_selectArr.png) no-repeat 100% 50%;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+
 input[type=submit],
 input[type=reset],
 button:hover {
