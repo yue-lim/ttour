@@ -192,7 +192,8 @@ body {
   overflow: hidden;
 }
 
-.openMOgnb, closeMOgnb {
+.openMOgnb, 
+.closeMOgnb {
   display: none;
 }
 
@@ -254,9 +255,10 @@ body {
   text-align: left;
 }
 
-.depth1 >li:hover .dep2box {
+/*submenu jQ 이벤트로 변경하기 1.서브메뉴2개이상이벤트(1)주석처리*/
+/* .depth1 >li:hover .dep2box {
   display: block;
-}
+} */
 
 .depth2 >li {
   display: inline-block;
