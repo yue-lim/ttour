@@ -380,9 +380,9 @@
       }
       
       /*(5)-5 호버 시, 서브메뉴 none으로 변경 하고 .depth2 관련은 다 지워도 상관X*/
-      /* .depth1 >li:hover .dep2box {
+      .depth1 >li:hover .dep2box {
         display: none;
-      } */
+      }
 
       /*(12) slide text p 크기 줄이기*/
 
