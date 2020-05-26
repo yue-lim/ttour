@@ -2,18 +2,52 @@
 // 껍데기 body영역 맨끝에 넣었으니까 굳이 없어도 됨
 // })
 
+//5.스크롤 이벤트
+//5-(6)-2
+$(window).scroll(function(){
+   var sct = $(this).scrollTop();
+   if ($('html').hasClass('moblie') ) {
+      if (sct > 50) {
+         $('.to_top').show()
+      } else {
+         $('.to_top').hide()
+      }
+   } else {
+      $('.to_top').show()
+   }
+})
 
-//4-(2)-1전역 변수 flag 바깥쪽에 선언!
-var flag = true;
+$('.to_top').on("click", function(){
+   $('body, html').animate({
+      scrollTop:"0px"
+   },600)  
+})
+
+
+//5-(5)-2 함수 만들기
+function init() {
+   var winWidth = $(this).width()
+   if ( winWidth > 799 ) {
+      $('#header').removeClass("on")
+      //5-(4) html에 클래스 더해주기
+      $('html').addClass('minTb').removeClass('moblie')
+      //5-(6)-1 큰버전일 때, to_top버튼 보이게
+      $('.to_top').show()
+   } else {
+      $('html').addClass('moblie').removeClass('minTb')
+   }
+}
+
 //4. 리사이즈 이벤트
 $(window).resize(function(){
-   var winWidth = $(this).width()
-   //4-(2)-2 플래그 변수 flag (지역/전역)
-   if ( winWidth > 799 && flag) {
-      $('#header').removeClass("on")
-      flag = false
-   }
+   init()
 }) 
+
+//5-(5)-1 load 메소드 : 읽는 순간 강제 이벤트
+$(window).load(function(){
+   init()
+})
+
 //1-(2)서브메뉴2개이상이벤트:포커스 이벤트 한정요소이기 때문에 a 요소 지목
 $('.depth1 >li >a').on("mouseover focus", function(){
    //3. 모바일화면상에서 헤더에 클래스 on을 가지고 있으면 dep2box가 안보이도록 if문 시용
