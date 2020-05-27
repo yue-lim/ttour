@@ -45,6 +45,8 @@ $(window).resize(function(){
 
 //5-(5)-1 load 메소드 : 읽는 순간 강제 이벤트
 $(window).load(function(){
+   //6-(3) loadingAni박스를 사라지게 하기
+   $('.loadingAni').delay(1000).fadeOut(500)
    init()
 })
 
