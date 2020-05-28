@@ -46,7 +46,7 @@ $(window).resize(function(){
 //5-(5)-1 load 메소드 : 읽는 순간 강제 이벤트
 $(window).load(function(){
    //6-(3) loadingAni박스를 사라지게 하기
-   $('.loadingAni').delay(1000).fadeOut(500)
+   $('.loadingAni').delay(500).fadeOut(500)
    init()
 })
 
@@ -87,3 +87,26 @@ $('#header .closeMOgnb').on("click", function(){
    $(this).parents('#header').removeClass("on")
 })
 
+//7-(4)-1 a를 click했을 때, 링크로 이동안하게 e.preventDefault();
+
+$('.place_list >li >a').on("click", function(e){
+   e.preventDefault();
+   //7-(4)-2 변수는 이름 그대로 속성은 attr 내용은 text로
+   var href = $(this).attr("href")
+   var src = $(this).attr("data-src")
+   var text = $(this).find("h3").text()
+   var info = $(this).find("p").text()
+   var alt = $(this).find("img").attr("alt")
+   //7-(5) 팝업창 띄우고 각각 추출값넣기
+   $('.popupBox').addClass("on")
+   $('.popupBox .inner h3').text(text)
+   $('.popupBox .inner p').text(info)
+   $('.popupBox .inner div a').attr("href", href)
+   $('.popupBox .inner div img').attr("src", src).attr("alt", alt)
+   
+})
+
+//7-(6) 닫기버튼 활성화 
+$('.popupBox button').on("click", function(){
+   $(this).parents(".popupBox").removeClass("on")
+})

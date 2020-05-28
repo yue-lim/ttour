@@ -452,6 +452,57 @@ body {
   display: inline-block;
 }
 
+/*7-(3) popupBox 시작*/
+
+.popupBox {
+  display: none;
+}
+
+.popupBox.on {
+  display:block;
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right:0;
+  background: rgba(138, 137, 137, 0.7);
+  z-index:99999999999
+}
+
+.popupBox.on .inner {
+  position: absolute;
+  top:520px;
+  left:50%;
+  transform:translate(-50%);
+  background: #fff;
+  text-align: center;
+  padding: 20px;
+} 
+
+.popupBox.on h3 {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px 0px;
+}
+
+.popupBox.on p {
+  font-size: 20px;
+  padding: 20px 0px;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.popupBox.on button {
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  top:-30px;
+  right: -30px;
+  background: none;
+  border: none;
+}
+
 /*사회적 거리는 늘이고 마음의 거리는 좁히고 시작*/
 
 .bgbox {
