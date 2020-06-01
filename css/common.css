@@ -494,11 +494,11 @@ body {
 }
 
 .popupBox.on button {
-  font-size: 30px;
+  font-size: 50px;
   color: #fff;
   position: absolute;
-  top:-30px;
-  right: -30px;
+  top:-45px;
+  right: -45px;
   background: none;
   border: none;
 }

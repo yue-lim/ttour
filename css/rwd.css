@@ -631,6 +631,20 @@ footer {
   background-position: -100px 0;
 }
 
+/*8-(5) X닫기버튼 사이즈조절*/
+@media screen and (max-width:500px) {
+
+  .popupBox.on button {
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    top:-30px;
+    right: -30px;
+    background: none;
+    border: none;
+  }
+
+}
       
       
 }

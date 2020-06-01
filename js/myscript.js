@@ -23,11 +23,12 @@ $('.to_top').on("click", function(){
    },600)  
 })
 
-
+//8-(1) 전역변수로 바꿔주기
+var winWidth
 //5-(5)-2 함수 만들기
 function init() {
-   var winWidth = $(this).width()
-   if ( winWidth > 799 ) {
+      winWidth = $(this).width()
+      if ( winWidth > 799 ) {
       $('#header').removeClass("on")
       //5-(4) html에 클래스 더해주기
       $('html').addClass('minTb').removeClass('moblie')
@@ -37,6 +38,7 @@ function init() {
       $('html').addClass('moblie').removeClass('minTb')
    }
 }
+
 
 //4. 리사이즈 이벤트
 $(window).resize(function(){
@@ -99,10 +101,23 @@ $('.place_list >li >a').on("click", function(e){
    var alt = $(this).find("img").attr("alt")
    //7-(5) 팝업창 띄우고 각각 추출값넣기
    $('.popupBox').addClass("on")
+   //8-(2) 799이하일 때 팝업창 위치
+   if (winWidth <= 799) {
+      var litop = $(this).parent().offset().top;
+      //8-(3) 위치, 넓이  등 스타일 추가 및 삭제
+      $('.popupBox .inner').css ({
+         top: litop,
+         width :"80%",
+         left:"0%",
+         transform:"translate(0%)",
+         margin:"0 10%"
+      })
+   }
    $('.popupBox .inner h3').text(text)
    $('.popupBox .inner p').text(info)
    $('.popupBox .inner div a').attr("href", href)
-   $('.popupBox .inner div img').attr("src", src).attr("alt", alt)
+   //8-(4) 더 줄였을 때 img가 튀어나오니,,, attr("width","")값을 추가로 잡아줌
+   $('.popupBox .inner div img').attr("src", src).attr("alt", alt).attr("width", "100%")
    
 })
 
