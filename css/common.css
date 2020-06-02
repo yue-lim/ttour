@@ -356,8 +356,76 @@ body {
   top:150px;
 }
 
-.slide2, .slide3 {
+/* Slide 2-(1) 주석처리 */
+/* .slide2, .slide3 {
   display: none;
+} */
+
+/* S 4-(1). 슬라이드 버튼 꾸미기 */
+.main_rolling_pc {
+  position: relative;
+}
+
+.marrow {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  background:none;
+  border: none;
+  font-size: 70px;
+  color: #fff;
+}
+
+.prevArrow {
+  left: 20px;
+  z-index: 1;
+}
+
+.nextArrow {
+  right: 20px;
+}
+
+/* S 4-(2). 슬라이드 버튼 꾸미기- 플러그인에서 자동으로 씌우는 클래스들 */
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.slick-dots li {
+  display: inline-block;
+}
+
+.slick-dots li button {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: none;
+  text-indent: -9999px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+/* S 4-(3). 활성버튼 꾸미기*/
+.slick-dots li.slick-active button {
+  width: 40px; 
+  border-radius: 50px;
+}
+
+/*S 5-(2) 플레이버튼 위치선정*/
+.plpa {
+  position: absolute;
+  right: 0;
+  bottom: 18px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  color: #fff;
+  width: 50%;
+  text-align: left;
+  padding-left: 60px;
 }
 
 /*다시 찾는 인기여행지 top3 시작*/
