@@ -132,8 +132,8 @@ $('.visualRoll').slick({
    autoplaySpeed: 3000, //슬라이드 지연시간 
    dots: true, // 기본값 false, 슬라이드 번호 버튼;동그라미버튼
    speed: 600, // 바뀌는 시간(생략가능)
-   slideToShow: 1, // 보여질 슬라이드 수(생략가능) ;여러개의 작은 이미지 에서 화살표 클릭하면 다음 이미지로 넘어가는 데 처음 보여지는 슬라이드 수
-   slideToScroll:1, // 이동 슬라이드 수(생략가능) ;위에 넘어갈 때 이미지를 몇개씩 이동하는 지 
+   slidesToShow: 1, // 보여질 슬라이드 수(생략가능) ;여러개의 작은 이미지 에서 화살표 클릭하면 다음 이미지로 넘어가는 데 처음 보여지는 슬라이드 수
+   slidesToScroll:1, // 이동 슬라이드 수(생략가능) ;위에 넘어갈 때 이미지를 몇개씩 이동하는 지 
    pauseOnHover: true, //마우스 오버시 슬라이드 멈추지 않게 (스마트폰이용시 우선false)(생략가능) 
    pauseOnDotsHover: true, //슬라이드 번호 버튼 위에 마우스 오버시 멈춤여부
    pauseOnFocus: false, // 슬라이드 버튼 클릭 시 자동실행 멈춤여부
@@ -175,8 +175,8 @@ $('.multi_rolling .multi_visual').slick({
    autoplaySpeed: 3000, 
    dots: true, 
    speed: 600, 
-   slideToShow: 4, 
-   slideToScroll:1, 
+   slidesToShow: 4, 
+   slidesToScroll:1, 
    pauseOnHover: true, 
    pauseOnDotsHover: true, 
    pauseOnFocus: false, 
