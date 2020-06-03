@@ -6,6 +6,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}
 
 h1,
 h2,
@@ -307,7 +310,7 @@ body {
 /*CONTAINER 시작*/
 /*슬라이드 박스*/
 
-.slide {
+.main_rolling_pc .slide {
   background-repeat: no-repeat;
   background-size: cover;
   height: 550px;
@@ -315,19 +318,19 @@ body {
   position: relative;
 }
 
-.slide1 {
+.main_rolling_pc .slide1 {
   background-image: url(../img/mainslide01.jpg);
 }
 
-.slide2 {
+.main_rolling_pc .slide2 {
   background-image: url(../img/mainslide02.jpg);
 }
 
-.slide3 {
+.main_rolling_pc .slide3 {
   background-image: url(../img/mainslide03.jpg);
 }
 
-.slide .text {
+.main_rolling_pc .slide .text {
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%,-50%);
@@ -335,7 +338,7 @@ body {
   text-align: center;
 }
 
-.slide .text p:nth-child(1) {
+.main_rolling_pc .slide .text p:nth-child(1) {
   font-size: 45px;
   letter-spacing: 0px;
   text-shadow: 2px 2px 5px #555;
@@ -343,13 +346,13 @@ body {
   padding-bottom: 10px;
 }
 
-.slide .text p:nth-child(2) {
+.main_rolling_pc .slide .text p:nth-child(2) {
   font-size: 20px;
   letter-spacing: 6px;
   margin-top: 20px;
 }
 
-.slide .text p:nth-child(3) {
+.main_rolling_pc .slide .text p:nth-child(3) {
   font-size: 20px;
   letter-spacing: 3px;
   position: relative;
@@ -361,12 +364,23 @@ body {
   display: none;
 } */
 
+/*fontAni 2. 각각의 활성화된 슬라이드의 p태그 */
+.main_rolling_pc .slide.slick-active .text p:nth-child(1) {
+  animation:bounce 1s both 0.5s
+}
+.main_rolling_pc .slide.slick-active .text p:nth-child(2) {
+  animation:bounceInUp 1s both 1s
+}
+.main_rolling_pc .slide.slick-active .text p:nth-child(3) {
+  animation:jackInTheBox 1s both 1.5s
+}
+
 /* S 4-(1). 슬라이드 버튼 꾸미기 */
 .main_rolling_pc {
   position: relative;
 }
 
-.marrow {
+.main_rolling_pc .marrow {
   position: absolute;
   top:50%;
   transform: translateY(-50%);
@@ -376,28 +390,28 @@ body {
   color: #fff;
 }
 
-.prevArrow {
+.main_rolling_pc .prevArrow {
   left: 20px;
   z-index: 1;
 }
 
-.nextArrow {
+.main_rolling_pc .nextArrow {
   right: 20px;
 }
 
 /* S 4-(2). 슬라이드 버튼 꾸미기- 플러그인에서 자동으로 씌우는 클래스들 */
-.slick-dots {
+.main_rolling_pc .slick-dots {
   position: absolute;
   bottom: 20px;
-  width: 100%;
-  text-align: center;
+  width: calc(50% + 50px);
+  text-align: right;
 }
 
-.slick-dots li {
+.main_rolling_pc .slick-dots li {
   display: inline-block;
 }
 
-.slick-dots li button {
+.main_rolling_pc .slick-dots li button {
   width: 15px;
   height: 15px;
   background: #fff;
@@ -409,13 +423,13 @@ body {
 }
 
 /* S 4-(3). 활성버튼 꾸미기*/
-.slick-dots li.slick-active button {
+.main_rolling_pc .slick-dots li.slick-active button {
   width: 40px; 
   border-radius: 50px;
 }
 
 /*S 5-(2) 플레이버튼 위치선정*/
-.plpa {
+.main_rolling_pc .plpa {
   position: absolute;
   right: 0;
   bottom: 18px;
@@ -423,9 +437,73 @@ body {
   border: none;
   font-size: 15px;
   color: #fff;
-  width: 50%;
+  width: calc(50% - 50px);
   text-align: left;
-  padding-left: 60px;
+  padding-left: 10px;
+}
+
+/*PlayRoll2 3. 갤러리 조정*/
+.multi_rolling {
+  padding: 50px 0px ;
+  position: relative;
+}
+
+.multi_rolling h2{
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+
+.multi_rolling img {
+  width: 100%;
+  padding: 0 5px;
+}
+
+.multi_rolling .marrow {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  background:none;
+  border: none;
+  font-size: 70px;
+  color: #999;
+}
+
+.multi_rolling .prevArrow {
+  left: -40px;
+  z-index: 1;
+}
+
+.multi_rolling .nextArrow {
+  right: -40px;
+}
+
+
+.multi_rolling .slick-dots {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  text-align: center;
+}
+
+.multi_rolling .slick-dots li {
+  display: inline-block;
+}
+
+.multi_rolling .slick-dots li button {
+  width: 15px;
+  height: 15px;
+  background: #999;
+  border: none;
+  text-indent: -9999px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+
+.multi_rolling .slick-dots li.slick-active button {
+  background: #000;
 }
 
 /*다시 찾는 인기여행지 top3 시작*/
