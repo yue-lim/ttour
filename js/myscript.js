@@ -169,21 +169,21 @@ $('.main_rolling_pc .plpa').on("click", function(){
    }
 })
 
-//PlayRoll2 2 
+//PlayRoll2 - 2 위에꺼 복붙하고 slideToShow갯수 수정
 $('.multi_rolling .multi_visual').slick({
-   autoplay: true, //기본값 false
-   autoplaySpeed: 3000, //슬라이드 지연시간 
-   dots: true, // 기본값 false, 슬라이드 번호 버튼;동그라미버튼
-   speed: 600, // 바뀌는 시간(생략가능)
-   slideToShow: 4, // 보여질 슬라이드 수(생략가능) ;여러개의 작은 이미지 에서 화살표 클릭하면 다음 이미지로 넘어가는 데 처음 보여지는 슬라이드 수
-   slideToScroll:1, // 이동 슬라이드 수(생략가능) ;위에 넘어갈 때 이미지를 몇개씩 이동하는 지 
-   pauseOnHover: true, //마우스 오버시 슬라이드 멈추지 않게 (스마트폰이용시 우선false)(생략가능) 
-   pauseOnDotsHover: true, //슬라이드 번호 버튼 위에 마우스 오버시 멈춤여부
-   pauseOnFocus: false, // 슬라이드 버튼 클릭 시 자동실행 멈춤여부
-   cssEase: 'linear', //슬라이드 움직임에 대한 가속도 함수값(생략가능) 
-   draggable: true, //마우스 드래그로 움직이는 거 -> true(생략가능) 
-   fade: false, // true이면 밀고 들어오는 형태가 아닌 제자리에서 사라지고 나타남(생략가능) 
-   arrows: true, //기본값 true (Previous//Next버튼)(생략가능) 
+   autoplay: true, 
+   autoplaySpeed: 3000, 
+   dots: true, 
+   speed: 600, 
+   slideToShow: 4, 
+   slideToScroll:1, 
+   pauseOnHover: true, 
+   pauseOnDotsHover: true, 
+   pauseOnFocus: false, 
+   cssEase: 'linear', 
+   draggable: true, 
+   fade: false, 
+   arrows: true, 
    prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
    nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
 })
