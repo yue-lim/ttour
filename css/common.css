@@ -444,7 +444,8 @@ body {
 
 /*PlayRoll2 - 3. 갤러리 조정*/
 .multi_rolling {
-  padding: 50px 0px ;
+  /*PlayRoll3 - 1 padding 좌우측을 Arrow -위치만큼 줘서 이동키를 안에 넣는다*/
+  padding: 50px 30px ;
   position: relative;
 }
 
@@ -465,17 +466,17 @@ body {
   transform: translateY(-50%);
   background:none;
   border: none;
-  font-size: 70px;
+  font-size: 50px;
   color: #999;
 }
 
 .multi_rolling .prevArrow {
-  left: -40px;
+  left: -30px;
   z-index: 1;
 }
 
 .multi_rolling .nextArrow {
-  right: -40px;
+  right: -30px;
 }
 
 
@@ -505,6 +506,26 @@ body {
 .multi_rolling .slick-dots li.slick-active button {
   background: #000;
 }
+
+/*PlayRoll3 - 4 양옆 슬라이드는 반투명으로 꾸미기*/
+.multi_rolling .slick-slide {
+  opacity: 0.6;
+  transform: scale(0.85);
+  transition: all 0.5s;
+}
+
+/*PlayRoll3 - 6 center 양옆에 슬라이드 opacity값만 1*/
+.multi_rolling .slick-slide.slick-active {
+  opacity:1
+}
+
+/*PlayRoll3 - 5 center 슬라이드 다시 원래모습으로*/
+.multi_rolling .slick-slide.slick-active.slick-current{
+  /* opacity: 1; */
+  transform: scale(1);
+}
+
+
 
 /*다시 찾는 인기여행지 top3 시작*/
 
@@ -685,12 +706,25 @@ body {
   margin-bottom: 70px;
 }
 
-.app_line {
+/*ScrollEvent 1-(4) 부모박스에 overflow:hidden넣기*/
+.appbbs_box {
+  overflow: hidden;
+}
+
+/*ScrollEvent 1-(2) animation.css에서 완전히 사라지도록 100%보다 더 높게*/
+.appbbs_box .app_line {
   float: left;
   width: 66%;
   padding: 45px 0;
   text-align: center;
   background: url(../img/bg_app.jpg) no-repeat;
+  -webkit-transform: translate3d(-200%, 0, 0);
+  transform: translate3d(-200%, 0, 0);
+}
+
+/*ScrollEvent 1-(1) 부모박스에 .on이 붙으면 애니메이션*/
+.appbbs_box.on .app_line {
+  animation: fadeInLeft 1s both 0.5s;
 }
 
 .app_line a {
@@ -713,9 +747,16 @@ body {
   padding-left: 85px;
 }
 
+/*ScrollEvent 1-(3) 반대쪽도 똑같이 설정*/
 .bbs_line {
   float: right;
   width: 30%;
+  -webkit-transform: translate3d(250%, 0, 0);
+    transform: translate3d(250%, 0, 0);
+}
+
+.appbbs_box.on .bbs_line {
+  animation: fadeInRight 1s both 0.5s;
 }
 
 .bbs_line h3 {

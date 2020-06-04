@@ -15,6 +15,13 @@ $(window).scroll(function(){
    } else {
       $('.to_top').show()
    }
+   //ScrollEvent 2. 양사이드에서 나오는 스크롤이벤트
+   //sct값은 scrollTop값 먼저 구해보고 적당한 값
+   if (sct >1000) {
+      $('.appbbs_box').addClass('on')
+   } else {
+      $('.abbbbs_box').removeClass('on')
+   }
 })
 
 $('.to_top').on("click", function(){
@@ -169,13 +176,16 @@ $('.main_rolling_pc .plpa').on("click", function(){
    }
 })
 
-//PlayRoll2 - 2 위에꺼 복붙하고 slideToShow갯수 수정
+//PlayRoll2 - 2 위에꺼 복붙하고 slideToShow갯수 등 수정
 $('.multi_rolling .multi_visual').slick({
    autoplay: true, 
    autoplaySpeed: 3000, 
-   dots: true, 
+   dots: false, 
    speed: 600, 
-   slidesToShow: 4, 
+   //PlayRoll3 - 2 centerMode , centerPadding 추가
+   centerMode: true,
+   centerPadding:'80px', //끄트머리 조각의 넓이
+   slidesToShow: 3, 
    slidesToScroll:1, 
    pauseOnHover: true, 
    pauseOnDotsHover: true, 
@@ -186,4 +196,13 @@ $('.multi_rolling .multi_visual').slick({
    arrows: true, 
    prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
    nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
+   //PlayRoll3 - 3 반응형 수정
+   responsive:[{
+      breakpoint:800, //799기준이니까 1px더한 값
+      settings:{
+         centerMode: true,
+         centerPadding:'100px',
+         slidesToShow: 1
+      }
+   }]
 })
