@@ -96,10 +96,13 @@ $('#header .closeMOgnb').on("click", function(){
    $(this).parents('#header').removeClass("on")
 })
 
-//7-(4)-1 a를 click했을 때, 링크로 이동안하게 e.preventDefault();
 
+var lieg; //popArow 3-(2) 전역변수로 선언
+//7-(4)-1 a를 click했을 때, 링크로 이동안하게 e.preventDefault();
 $('.place_list >li >a').on("click", function(e){
    e.preventDefault();
+   // popArow 3-(1) 변경해야하니까 a list 의 번호를 부름
+   lieq = $(this).parent().index()
    //7-(4)-2 변수는 이름 그대로 속성은 attr 내용은 text로
    var href = $(this).attr("href")
    var src = $(this).attr("data-src")
@@ -129,9 +132,49 @@ $('.place_list >li >a').on("click", function(e){
 })
 
 //7-(6) 닫기버튼 활성화 
-$('.popupBox button').on("click", function(){
+$('.popupBox button.close').on("click", function(){
    $(this).parents(".popupBox").removeClass("on")
 })
+
+//popArow 4 -(1) lieq 2 1 0 -1 음수 되지않고 다시 2로 돌아오기 if로 
+$('.popupBox button.prev').on("click", function(){
+   --lieq;
+   if (lieq <0 ) {
+      lieq = 2;
+   }
+   //popArow 4 - (2) 변수 이름은 안에서만 선언했기때문에 굳이 변경 안해도 됨
+   var href = $(".place_list >li").eq(lieq).find("a").attr("href")
+   var src = $(".place_list >li").eq(lieq).find("a").attr("data-src")
+   var text = $(".place_list >li").eq(lieq).find("a").find("h3").text()
+   var info = $(".place_list >li").eq(lieq).find("a").find("p").text()
+   var alt = $(".place_list >li").eq(lieq).find("a").find("img").attr("alt")
+
+   $('.popupBox .inner h3').text(text)
+   $('.popupBox .inner p').text(info)
+   $('.popupBox .inner div a').attr("href", href)
+   $('.popupBox .inner div img').attr("src", src).attr("alt", alt).attr("width", "100%")
+})
+
+//popArow 5 반대쪽도 해줌 .length 속성이라 ()안씀
+$('.popupBox button.next').on("click", function(){
+   ++lieq;
+   if (lieq == $('.place_list >li').length ) {
+      lieq = 0;
+   }
+   
+   var href = $(".place_list >li").eq(lieq).find("a").attr("href")
+   var src = $(".place_list >li").eq(lieq).find("a").attr("data-src")
+   var text = $(".place_list >li").eq(lieq).find("a").find("h3").text()
+   var info = $(".place_list >li").eq(lieq).find("a").find("p").text()
+   var alt = $(".place_list >li").eq(lieq).find("a").find("img").attr("alt")
+
+   $('.popupBox .inner h3').text(text)
+   $('.popupBox .inner p').text(info)
+   $('.popupBox .inner div a').attr("href", href)
+   $('.popupBox .inner div img').attr("src", src).attr("alt", alt).attr("width", "100%")
+})
+
+
 
 //S 3 슬라이더박스
 $('.visualRoll').slick({

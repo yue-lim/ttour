@@ -700,7 +700,7 @@ body {
   line-height: 1.5;
 }
 
-.popupBox.on button {
+.popupBox.on button.close {
   font-size: 50px;
   color: #fff;
   position: absolute;
@@ -709,6 +709,27 @@ body {
   background: none;
   border: none;
 }
+
+/* popArow 2. 팝업창 화살표 꾸미기 */
+.popupBox.on button.arrow {
+  border: none;
+  background: none;
+  font-size: 80px;
+  color: #fff;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.popupBox.on button.prev {
+  left: -80px;
+}
+
+.popupBox.on button.next {
+  right: -80px;
+}
+
+
 
 /*사회적 거리는 늘이고 마음의 거리는 좁히고 시작*/
 
