@@ -399,8 +399,8 @@ body {
   right: 20px;
 }
 
-/* S 4-(2). 슬라이드 버튼 꾸미기- 플러그인에서 자동으로 씌우는 클래스들 */
-.main_rolling_pc .slick-dots {
+/* 번호 버튼 타입 S 4-(2). 슬라이드 버튼 꾸미기- 플러그인에서 자동으로 씌우는 클래스들 */
+/* .main_rolling_pc .slick-dots {
   position: absolute;
   bottom: 20px;
   width: calc(50% + 50px);
@@ -420,13 +420,53 @@ body {
   overflow: hidden;
   border-radius: 50%;
   margin: 0 5px;
-}
+} */
 
 /* S 4-(3). 활성버튼 꾸미기*/
-.main_rolling_pc .slick-dots li.slick-active button {
+/* .main_rolling_pc .slick-dots li.slick-active button {
   width: 40px; 
   border-radius: 50px;
+} */
+
+/*번호버튼 애니메이션 타입 SBtnBar 1. 슬릭버튼 가로바 모양으로 */
+.main_rolling_pc .slick-dots {
+  position: absolute;
+  bottom: 23px;
+  width: calc(60% + 30px);
+  text-align: right;
 }
+
+.main_rolling_pc .slick-dots li {
+  display: inline-block;
+  width: 114px;
+  height: 2px;
+  background: #999;
+  margin: 0 5px;
+  position: relative;
+}
+
+.main_rolling_pc .slick-dots li button {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background: #fff;
+  border: none;
+  text-indent: -9999px;
+  overflow: hidden;
+  border-radius: 1px;
+}
+
+.main_rolling_pc .slick-dots li.slick-active button {
+  animation: lineani 3s both;
+}
+
+@keyframes lineani {
+  0% {width: 0;}
+  100% {width:100%}
+}
+
 
 /*S 5-(2) 플레이버튼 위치선정*/
 .main_rolling_pc .plpa {
@@ -437,7 +477,7 @@ body {
   border: none;
   font-size: 15px;
   color: #fff;
-  width: calc(50% - 50px);
+  width: calc(40% - 30px);
   text-align: left;
   padding-left: 10px;
 }
