@@ -843,6 +843,13 @@ body {
   white-space: nowrap;
 }
 
+/*map*/
+
+.map {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
 /*FOOTER 시작*/
 
 footer {
