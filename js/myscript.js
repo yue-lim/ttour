@@ -239,13 +239,4 @@ $('.multi_rolling .multi_visual').slick({
    arrows: true, 
    prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
    nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
-   //PlayRoll3 - 3 반응형 수정
-   responsive:[{
-      breakpoint:800, //799기준이니까 1px더한 값
-      settings:{
-         centerMode: true,
-         centerPadding:'100px',
-         slidesToShow: 1
-      }
-   }]
 })
