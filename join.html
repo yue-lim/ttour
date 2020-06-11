@@ -8,11 +8,13 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
 	<link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/rwd.css">
 	<link rel="stylesheet" href="css/join.css">
 	<script src="js/jquery-1.12.4.min.js"></script>
 	<script src="js/jquery-migrate-1.4.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 	<!--[if lte IE 9]>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/prefixfree.min.js"></script>
@@ -130,6 +132,13 @@
                                     <div class="app_content">
                                         <input type="text" id="hb_lbl" placeholder='휴대폰번호를 "-"없이 숫자만 입력해주세요' requierd>
                                      </div>
+								 </li>
+								 <!-- 4-1. 생년월일 달력Plug In -->
+								 <li class="cf">
+                                    <label for="birthday" class="tit_lbl pilsoo_item">생년월일</label>
+                                    <div class="app_content">
+                                        <input type="text" id="birthday" name="birthday">
+                                     </div>
                                  </li>
 								 <li class="cf">
                                     <label class="tit_lbl pi">성별</label>
@@ -143,6 +152,9 @@
 								 <li class="cf">
 									 <label class="tit_lbl">취미</label>
 									 <div class="app_content hobby_area">
+										<!-- 0611 3-1. 전체선택 만들기  -->
+										<input type="checkbox" id="allchek" name="allchek">
+										<label for="allchek">전체선택</label>
 										 <input type="checkbox" id="hobby1" name="hobby1">
 										 <label for="hobby1">등산</label>
 										 <input type="checkbox" id="hobby2" name="hobby2">
@@ -242,6 +254,26 @@
 			var remain = maxlen - current 
 			// span태그에 남은 글자수;변수 담아줌
 			$('.app_content p span').text(remain) //여기까지하면 남은 글자수 -1까지로 써짐
+		})
+
+		//3-2 체크박스에 checked가 있는 지 없는 지 여부 
+		$('#allchek').on("click", function(){
+			var bool = $(this).prop("checked")
+			//bool 여부에 따라 bool true Or bool false
+			$('.hobby_area input[name^="hobby"]').prop("checked", bool);
+		})
+
+		//4-2 datepicker()
+		$('#birthday').datepicker({
+			dateFormat:'yy-mm-dd', //날짜형식
+			changeMonth:true, //월 선택
+			changeYear:true, //연도 선택
+			yearRange:'1900:2020' //연도 범위
+		});
+		$.datepicker.setDefaults({
+			dayNamesMin:['일', '월', '화', '수', '목', '금', '토'],
+			monthNames:['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월','9월', '10월', '11월', '12월', ],
+			showMonthAfterYear: true
 		})
 	</script>
 

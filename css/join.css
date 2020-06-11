@@ -87,7 +87,8 @@
 
 .join_form #email_lbl,
 .join_form #edomain,
-.join_form #edomain_opt {
+.join_form #edomain_opt,
+.join_form #birthday {
     width: 160px;
 }
 

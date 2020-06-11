@@ -239,4 +239,12 @@ $('.multi_rolling .multi_visual').slick({
    arrows: true, 
    prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
    nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
+   responsive: [{
+      breakpoint: 800,
+      settings: {
+              slidesToShow: 1, 
+              centerMode: true,
+              centerPadding: "100px",
+      }
+  }]
 })
